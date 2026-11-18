@@ -96,19 +96,25 @@ body { padding-bottom: calc(15px + env(safe-area-inset-bottom)); }
 
 
 
-
-
-    .monitoramento::before {
-    content: "📡";
-    display: inline-block;
-    margin-right: 8px;
-    animation: girar 4s linear infinite;
+.faixa-veiculo {
+    position: relative;
+    height: 35px;
+    overflow: hidden;
+    margin-bottom: 15px;
 }
 
-@keyframes girar {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+.faixa-veiculo span {
+    position: absolute;
+    left: -40px;
+    animation: moverCarro 8s linear infinite;
 }
+
+@keyframes moverCarro {
+    from { left: -40px; }
+    to { left: 100%; }
+}
+
+    
 
 </style>
 </head>
@@ -116,8 +122,10 @@ body { padding-bottom: calc(15px + env(safe-area-inset-bottom)); }
 
 <div class="container">
     
-    <div class="monitoramento">
-    <h2> 📡 Escala de Sobreaviso</h2>
+    <div class="faixa-veiculo">
+    <span>🚗</span>
+</div>
+    <h2>Escala de Sobreaviso</h2>
 </div>
 
     <form id="mainForm">
