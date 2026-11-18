@@ -105,13 +105,18 @@ body { padding-bottom: calc(15px + env(safe-area-inset-bottom)); }
 
 .faixa-veiculo span {
     position: absolute;
-    left: -40px;
+    left: -100px;
+    white-space: nowrap;
     animation: moverCarro 8s linear infinite;
 }
 
 @keyframes moverCarro {
-    from { left: -40px; }
-    to { left: 100%; }
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(100vw + 150px));
+    }
 }
 
     
@@ -123,7 +128,7 @@ body { padding-bottom: calc(15px + env(safe-area-inset-bottom)); }
 <div class="container">
     
     <div class="faixa-veiculo">
-    <span>🚗</span>
+    <span>🚗💨</span>
 
     <h2>Escala de Sobreaviso</h2>
 </div>
