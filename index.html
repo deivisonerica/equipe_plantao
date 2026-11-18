@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ESCALA DE SOBREAVISO</title>
-<style>
+<style>    
 :root {
     --primary: #25d366;
     --primary-dark: #128c7e;
@@ -93,10 +93,29 @@ body { padding-bottom: calc(15px + env(safe-area-inset-bottom)); }
     .stack-mobile { flex-direction: column; gap: 0; }
     .stack-mobile > .form-group { flex: none !important; }
 }
+
+
+
+
+
+    .monitoramento::before {
+    content: "📡";
+    display: inline-block;
+    margin-right: 8px;
+    animation: girar 4s linear infinite;
+}
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 </style>
 </head>
 <body>
-
+<div class="monitoramento">
+    📡 Monitoramento de Sobreaviso
+</div>
 <div class="container">
     <h2>Escala de Sobreaviso</h2>
 
